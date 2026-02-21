@@ -1,0 +1,321 @@
+/* Argentum Sans шрифт */
+@import url('https://fonts.cdnfonts.com/css/argentum-sans');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Argentum Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    overflow-x: hidden;
+    position: relative;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+
+/* ================= IMAGE FIX ================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.magazin-images img,
+.plac-images img,
+.vis-images img,
+.ris-images img,
+.daidjest-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Шапка с логотипом */
+header {
+    padding: 20px 40px;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: auto;
+    max-height: 70px;
+    object-fit: contain;
+   
+}
+
+/* Первый баннер */
+.banner_1 {
+    padding: 40px 60px;
+    position: relative;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Левая часть баннера */
+.banner-left {
+    flex: 1;
+    position: relative;
+}
+
+.zag_1 {
+    font-family: 'Argentum Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #1a1a1a;
+    letter-spacing: -1.5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.duplicate-text {
+    font-family: 'Argentum Sans', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    line-height: 1.1;
+    color: rgba(26, 26, 26, 0.25);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+/* Центральная часть - телеграм */
+.banner-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.tg-banner {
+    text-align: center;
+}
+
+.tg-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 20px;
+    padding: 18px 35px;
+    background-color: #ffffff;
+    border: 2.5px solid #1a1a1a;
+    border-radius: 50px; /* Закругление кнопки */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.tg-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    transition: left 0.4s ease;
+    z-index: 0;
+}
+
+.tg-link:hover::before {
+    left: 0;
+}
+
+.tg-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tg-link:hover .zag_2 {
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.tg-link:hover .tg_strel {
+    filter: brightness(0) invert(1);
+    position: relative;
+    z-index: 1;
+}
+
+.zag_2 {
+    font-family: 'Argentum Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.arrow-container {
+    display: flex;
+    align-items: center;
+}
+
+.tg_strel {
+    height: 22px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+/* Правая часть - QR код */
+.banner-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.magazin-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border: 2px solid #1a1a1a;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.magazin-btn:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+    transform: translateY(-4px);
+}
+
+.tg_qr {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    border-radius: 40px; /* Закругление QR кода */
+}
+
+/* ===== ГЛОБАЛЬНЫЕ ОТСТУПЫ ===== */
+
+.banner_2 {
+    padding: 100px 60px;
+}
+
+.magazin-section,
+.plac-section,
+.daidjest-section,
+.vis-section,
+.ris-section {
+    margin-bottom: 120px;
+}
+
+/* ================= АДАПТИВ ================= */
+
+/* Планшеты */
+@media (max-width: 1024px) {
+    .banner_1 {
+        padding: 40px 30px;
+    }
+
+    .zag_1 {
+        font-size: 2.4rem;
+    }
+}
+
+
+/* Мобильные устройства */
+/* ================= MOBILE REDESIGN ================= */
+
+/* ================= MOBILE REDESIGN ================= */
+
+@media (max-width: 768px) {
+
+    .banner_1 {
+        padding: 60px 20px 40px;
+        background: #ffffff;
+    }
+
+    .banner-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .banner-left {
+        width: 100%;
+    }
+
+    .zag_1 {
+        font-size: 2.1rem;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        font-weight: 700;
+    }
+
+    .banner-center {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tg-link {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+        padding: 16px 28px;
+        border-radius: 100px;
+        font-size: 1rem;
+    }
+
+    .tg-link:hover {
+        transform: none; /* убираем резкий lift на мобилке */
+        box-shadow: none;
+    }
+     .magazin-btn {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+}
+
+
+/* Маленькие телефоны */
+@media (max-width: 480px) {
+
+    .zag_1 {
+        font-size: 1.6rem;
+    }
+
+    .tg-link {
+        padding: 14px 18px;
+    }
+
+    .zag_2 {
+        font-size: 1rem;
+    }
+}
